@@ -88,17 +88,28 @@
         font-weight: 700;
       }
 
+      h1,
+      .prices {
+        margin: 0;
+      }
+
+      .visually-hidden {
+        display: none;
+        visibility: hidden;
+      }
+
       .discount-price {
         font-family: "Fraunces", serif;
         font-weight: 700;
         font-size: 2rem;
         color: hsl(158, 36%, 37%);
+        margin: 0;
       }
 
       .original-price {
         font-family: "Montserrat", sans-serif;
+        font-weight: 500;
         font-size: 0.813rem;
-        text-decoration: line-through;
       }
 
       button {
@@ -138,16 +149,12 @@
           padding: 0 1.7rem;
         }
 
-        .btn-wrapper {
-          text-align: center;
-        }
-
         button {
-          margin: 1rem 0;
+          margin-bottom: 1rem;
         }
 
         .original-price {
-          margin-left: 1.2rem;
+          margin-left: 0.5rem;
         }
       }
     </style>
@@ -168,16 +175,17 @@
         </p>
 
         <p class="prices">
-          <span class="discount-price">$149.99</span>
-          <span class="original-price">$169.99</span>
+          <p class="discount-price">
+            $149.99 
+            <span class="visually-hidden">Old price:</span>
+            <del class="original-price">$169.99</del>
+          </p>
         </p> 
 
-        <div class="btn-wrapper">
-          <button>
-            <img src="/images/icon-cart.svg" alt="cart-icon" class="cart-icon"/>
-            Add to Cart
-          </button>
-        </div>
+        <button>
+          <img src="/images/icon-cart.svg" alt="cart-icon" class="cart-icon"/>
+          Add to Cart
+        </button>
       </div>
     </main>
 
