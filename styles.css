@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.img-container {
+  background-image: url("/images/image-product-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 28.125rem;
+  z-index: 1;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.description {
+  line-height: 1.7;
+  font-size: 0.875rem;
+}
+
+h5 {
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+}
+
+h5,
+.description,
+.original-price {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+}
+
+h5,
+h1,
+.description {
+  margin: 1rem 0;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+h1,
+.prices {
+  margin: 0;
+  line-height: 1;
+}
+
+.visually-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.discount-price {
+  display: flex;
+  align-items: center;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+  margin: 0;
+}
+
+.original-price {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.813rem;
+}
+
+button {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 0.813rem;
+  width: 100%;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.cart-icon {
+  background-color: hsl(158, 36%, 37%);
+  width: 0.899rem;
+  margin-right: 0.388rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width: 31.25rem) {
+  .container {
+    width: 21.438rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-container {
+    background-image: url("/images/image-product-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 15rem;
+    z-index: 1;
+  }
+
+  .info {
+    padding: 1rem;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  .original-price {
+    margin-left: 1.5rem;
+  }
+}
